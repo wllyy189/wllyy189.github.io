@@ -24,6 +24,8 @@ Myblog -> http://www.wangle.pub
 
 ### 创建一个项目
 
+
+
 ### 安装Jekyll
 
 [Jekyll 中文文档](http://jekyll.com.cn)，英语水平一般的福利。
@@ -38,4 +40,4 @@ Myblog -> http://www.wangle.pub
 ```
 gem install jekyll
 ```
-所有`Jekyll`的依赖包都会被自动安装
+所有`Jekyll`的依赖包都会被自动安装。
