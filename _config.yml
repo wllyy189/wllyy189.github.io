@@ -5,7 +5,7 @@ header-img: img/post-bg-css.jpg # 首页头部背景图
 email: 87292008@qq.com # 邮箱地址
 description: "这里是 @LeW王樂 的个人博客，与你一起发现世界。"
 keyword: "王乐, 樂, LeW, 王樂的博客, LeW Blog, Java，Kotlin, 全栈"
-url: "https://wangle.pub"          # your host, for absolute URL
+url: "http://wangle.pub"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/wllyy189/wllyy189.github.io.git" # you code repository
 
@@ -65,6 +65,7 @@ kramdown:
 # Disqus settings
 # Disqus（https://disqus.com/）
 disqus_username: wllyy189
+
 # Gitalk settings
 # gitalk:
 #   enable: true #是否开启Gitalk评论
@@ -119,6 +120,6 @@ page-mathjax: false
 friends: [
     {
         title: "LeW Blog",
-        href: "https://wangle.pub"
+        href: "http://wangle.pub"
     }
 ]
