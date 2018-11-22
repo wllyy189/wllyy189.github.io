@@ -6,6 +6,7 @@ date:       2018-11-22 15:00:00
 author:     "LeW"
 header-img: "assets/20181122/post-bg-20181005.jpg"
 catalog: true
+comments: true
 tags:
     - 生活
 ---
