@@ -64,7 +64,7 @@ kramdown:
 
 # Disqus settings
 # Disqus（https://disqus.com/）
-disqus_username: wllyy189
+disqus_username: wangle-pub
 disqus_shortname: wangle-pub
 
 # Gitalk settings
