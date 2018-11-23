@@ -99,4 +99,127 @@ gem install jekyll
 
 到此 Disqus 帐号及配置已基本准备完毕。
 
+### 注册 百度统计 帐号
+
+如需要给自己的博客加上统计分析，则可以集成 [Baidu Analytics](http://tongji.baidu.com/web/welcome/login) 和 [Google Analytics](http://www.google.cn/analytics/)。我使用的是百度。
+
+注册好百度统计帐号，新增一个和你博客地址对应的站点。
+
+记录好`track_id`：
+![](https://upload-images.jianshu.io/upload_images/1120919-3cffcb9505237e4d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+### 配置 Blog
+
+[Jekyll 网站的基本结构](https://www.jekyll.com.cn/docs/structure/)：
+
+```
+├── _config.yml
+├── _drafts
+|   ├── begin-with-the-crazy-ideas.textile
+|   └── on-simplicity-in-technology.markdown
+├── _includes
+|   ├── footer.html
+|   └── header.html
+├── _layouts
+|   ├── default.html
+|   └── post.html
+├── _posts
+|   ├── 2007-10-29-why-every-programmer-should-play-nethack.textile
+|   └── 2009-04-26-barcamp-boston-4-roundup.textile
+├── _data
+|   └── members.yml
+├── _site
+└── index.html
+```
+
+主要记住以下几点基本满足日常使用：
+- `_config.yml`全局配置文件
+- `_posts` 这里放的就是你的文章了。文件格式很重要，必须要符合：`YEAR-MONTH-DAY-title.MARKUP`
+
+**_config.yml 配置**
+```
+# 站点设置
+title: LeW Blog # 博客标题
+SEOTitle: 樂的博客 | LeW Blog # 显示在浏览器上搜索的时候显示的标题
+header-img: img/post-bg-css.jpg # 首页头部背景图
+email: 87292008@qq.com # 邮箱地址
+description: "这里是 @LeW王樂 的个人博客。"
+keyword: "王樂的博客, LeW Blog"
+url: "https://wangle.pub" # 站点地址, for absolute URL
+baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
+github_repo: "https://github.com/wllyy189/wllyy189.github.io.git" # you code repository
+
+# 侧边栏设置
+sidebar: true # 是否开启侧边栏                           
+sidebar-avatar: /img/avatar-lew.jpg # 个人头像
+sidebar-about-description: "世界那么大，我想出去看看。" # 个人简介
+
+# 社交配置
+RSS: false # 是否开启rss
+zhihu_username:  # 知乎用户名
+github_username:  # GitHub 用户名
+jianshu_username:   # 简书用户名
+
+# 评论设置
+# Disqus（https://disqus.com/）
+disqus_username: wangle-pub # 前文记录的Shortname
+
+# 统计设置
+# Baidu Analytics
+ba_track_id: 111af758c93fe1bb0cb285baff48a6ef # 前文记录的ba_track_id
+```
+
+修改完成后提交到 GitHub 则已完成基本配置，博客已可访问。
+
+### 写文章
+
+发表文章一般用`markdown`格式写好放在`_posts`目录下。
+一般文件头配置：
+```
+---
+layout: post
+title: "标题"
+subtitle: " 子标题"
+date: 2018-11-22 15:00:00 # 写作日期
+author: "作者名"
+header-img: "assets/20181122/post-bg-20181005.jpg" # 文章头部背景图地址
+catalog: true # 是否开启目录
+tags: # 标签
+    - 笔记
+---
+```
+
+## 进阶篇
+
+### 自定义域名
+
+首先，你必须购买一个自己的域名，可在[阿里云](https://www.aliyun.com/)进行购买。
+
+### 添加 CNAME 文件
+
+在 blog 仓库下面添加 `CNAME` 文件，文件内容为你购买的域名，例如：`wangle.pub`。
+
+### 解析域名
+
+注册好域名后，需要将域名解析到你的博客上。
+管理控制台 → 域名：
+![](https://upload-images.jianshu.io/upload_images/1120919-f1a64cee82dc88ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+分别添加两个 `CNAME` 记录类型 `www` 和 `@` 指向到你博客的 GitHub 域名：
+![](https://upload-images.jianshu.io/upload_images/1120919-f01090807a2c08e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### HTTPS 配置
+
+如果需要配置 `https`，可以在 GitHub 仓库的 settings 中进行配置，勾选 `Enforce HTTPS`：
+
+![](https://upload-images.jianshu.io/upload_images/1120919-14f46e3254a0df5b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+
+
+
+
+
+
 
